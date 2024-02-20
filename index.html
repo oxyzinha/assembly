@@ -1,74 +1,308 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assembly and Scripting Languages</title>
-    <link rel="stylesheet" href="style.css">
-   
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function scrollToNextImage(nextImageId) {
+            var nextImage = document.getElementById(nextImageId);
+            nextImage.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </head>
+
 <body>
-    <!-- English Translator Button -->
-    <button id="language-toggle">English</button>
-    
-    <!-- Portuguese Content -->
-    <div id="portuguese-content">
-        <div class="title-box">
-            <h1>Assembly:</h1>
+    <center>
+        <div class="image" id="image1">
+            <img src="blue.jpg" alt="Imagem 1">
+            <div class="overlay">
+                <h2>Introdução</h2>
+            </div>
+            <div class="button-container">
+                <button onclick="scrollToNextImage('image2')">Assembly</button>
+                <button onclick="scrollToNextImage('image3')">Linguagem de Script</button>
+            </div>
         </div>
-        <p><strong>Definição:</strong> Assembly é uma linguagem de programação de baixo nível que representa instruções de linguagem de máquina de forma textual, usando mnemônicos que correspondem a operações de nível mais baixo realizadas pelo processador.</p>
-        
-        <p><strong>Nível de Abstração:</strong> É uma linguagem de programação de baixo nível, o que significa que está muito próxima da linguagem de máquina entendida pelo hardware do computador. Cada instrução em Assembly é geralmente traduzida diretamente para uma instrução em linguagem de máquina.</p>
-        
-        <p><strong>Arquitetura Específica:</strong> O código Assembly é específico para a arquitetura do processador alvo. Por exemplo, o Assembly para um processador x86 será diferente do Assembly para um processador ARM.</p>
-        
-        <p><strong>Uso:</strong> Assembly é usado em situações onde é necessário controle preciso sobre o hardware do computador ou quando é crucial otimizar o desempenho do código para executar operações específicas rapidamente. Isso inclui o desenvolvimento de sistemas operacionais, drivers de dispositivos, firmware de baixo nível e outras aplicações de baixo nível.</p>
-        
-        <p><strong>Exemplos de Assembler:</strong> Alguns exemplos de assemblers populares incluem NASM (Netwide Assembler), MASM (Microsoft Macro Assembler), GAS (GNU Assembler) e TASM (Turbo Assembler).</p>
+        <div class="image" id="image2">
+            <figure>
+            <img src="blue.jpg" alt="Imagem 2">
+            <div class="overlay">
+                <figcaption>
+                <h1>Assembly:</h1>
+            </div>
+            <p><strong>Definição:</strong> Assembly é uma linguagem de programação de baixo nível que representa instruções
+                de linguagem de máquina de forma textual, usando mnemônicos que correspondem a operações de nível mais baixo
+                realizadas pelo processador.</p>
     
-        <div class="title-box">
-            <h2>Linguagens de Script:</h2>
-        </div>
-        <p><strong>Definição:</strong> Uma linguagem de script é uma linguagem de programação de alto nível projetada para automação de tarefas e interação com sistemas de software. Essas linguagens são interpretadas, o que significa que o código-fonte é executado diretamente por um interpretador, sem a necessidade de compilação prévia.</p>
-        
-        <p><strong>Interpretação:</strong> As linguagens de script são geralmente interpretadas, o que permite uma execução rápida e flexível do código. Isso torna-as ideais para tarefas de automação e scripting, onde é necessário iterar rapidamente sobre o código durante o desenvolvimento.</p>
-        
-        <p><strong>Tipagem Dinâmica:</strong> Muitas linguagens de script têm tipagem dinâmica, o que significa que os tipos de dados das variáveis são determinados em tempo de execução. Isso oferece flexibilidade, mas também pode levar a erros difíceis de detectar.</p>
-        
-        <p><strong>Uso:</strong> As linguagens de script são amplamente utilizadas em uma variedade de contextos, incluindo automação de tarefas de sistemas, desenvolvimento web, processamento de texto, manipulação de dados, entre outros. Exemplos incluem Python, JavaScript, Ruby, Perl e PowerShell.</p>
-        
-        <p><strong>Facilidade de Uso:</strong> As linguagens de script são conhecidas por sua facilidade de uso e sintaxe legível. Elas são projetadas para serem acessíveis para programadores iniciantes e experientes, facilitando o desenvolvimento rápido de soluções de software.</p>
-    </div>
+            <p><strong>Nível de Abstração:</strong> É uma linguagem de programação de baixo nível, o que significa que está
+                muito próxima da linguagem de máquina entendida pelo hardware do computador. Cada instrução em Assembly é
+                geralmente traduzida diretamente para uma instrução em linguagem de máquina.</p>
     
-    <!-- English Content (Hidden by Default) -->
-    <div id="english-content" style="display: none;">
-        <div class="title-box">
-            <h1>Assembly:</h1>
-        </div>
-        <p><strong>Definition:</strong> Assembly is a low-level programming language that represents machine language instructions textually, using mnemonics that correspond to lower-level operations performed by the processor.</p>
-        
-        <p><strong>Abstraction Level:</strong> It is a low-level programming language, which means it is very close to the machine language understood by the computer's hardware. Each instruction in Assembly is usually translated directly into a machine language instruction.</p>
-        
-        <p><strong>Specific Architecture:</strong> Assembly code is specific to the target processor architecture. For example, Assembly for an x86 processor will be different from Assembly for an ARM processor.</p>
-        
-        <p><strong>Usage:</strong> Assembly is used in situations where precise control over the computer hardware is needed or when it is crucial to optimize code performance to execute specific operations quickly. This includes the development of operating systems, device drivers, low-level firmware, and other low-level applications.</p>
-        
-        <p><strong>Assembler Examples:</strong> Some examples of popular assemblers include NASM (Netwide Assembler), MASM (Microsoft Macro Assembler), GAS (GNU Assembler), and TASM (Turbo Assembler).</p>
+            <p><strong>Arquitetura Específica:</strong> O código Assembly é específico para a arquitetura do processador
+                alvo. Por exemplo, o Assembly para um processador x86 será diferente do Assembly para um processador ARM.
+            </p>
     
-        <div class="title-box">
-            <h2>Scripting Languages:</h2>
+            <p><strong>Uso:</strong> Assembly é usado em situações onde é necessário controle preciso sobre o hardware do
+                computador ou quando é crucial otimizar o desempenho do código para executar operações específicas
+                rapidamente. Isso inclui o desenvolvimento de sistemas operacionais, drivers de dispositivos, firmware de
+                baixo nível e outras aplicações de baixo nível.</p>
+    
+            <p><strong>Exemplos de Assembler:</strong> Alguns exemplos de assemblers populares incluem NASM (Netwide
+                Assembler), MASM (Microsoft Macro Assembler), GAS (GNU Assembler) e TASM (Turbo Assembler).
+    
+                <p>
+               <strong> Características Principais</strong>
+    
+                Baixo Nível: Descreve a proximidade da linguagem Assembly com as instruções de máquina.
+                
+                Mnemônicos: Representam as operações de máquina de forma legível para humanos.
+                
+                Estrutura Linear: Programas Assembly geralmente seguem uma sequência linear de instruções, com controle de
+                fluxo implementado através de instruções de salto.
+                
+            Acesso Direto à Memória e Hardware: Assembly oferece controle direto sobre memória, registradores e
+                periféricos de hardware.</p>
+                
+               <p> <strong>Características Adicionais</strong> 
+                
+            Eficiência de Desempenho: Destaca o potencial de desempenho máximo dos programas Assembly.
+                
+                Flexibilidade: Enfatiza a capacidade de granularidade fina no controle de recursos do sistema.
+                
+                Tamanho do Código: Menciona a compacidade dos programas Assembly em comparação com linguagens de alto nível.
+                
+                Desafios de Manutenção e Portabilidade: Reconhece os desafios associados à manutenção e portabilidade de
+                programas Assembly. </p>
+            </figcaption>
+        </figure>
+            </div>
+            <div class="button-container">
+                <button onclick="scrollToNextImage('image1')">Voltar</button>
+                <button onclick="scrollToNextImage('image3')">Linguagem de Script</button>
+            </div>
+
         </div>
-        <p><strong>Definition:</strong> A scripting language is a high-level programming language designed for task automation and interaction with software systems. These languages are interpreted, which means the source code is executed directly by an interpreter, without the need for prior compilation.</p>
+        <div class="image" id="image3">
+            <img src="blue.jpg" alt="Imagem 3">
+            <div class="overlay">
+                <h2>Linguagens de Script:</h2>
+            </div>
+            <p><strong>Definição:</strong> Uma linguagem de script é uma linguagem de programação de alto nível projetada
+                para automação de tarefas e interação com sistemas de software. Essas linguagens são interpretadas, o que
+                significa que o código-fonte é executado diretamente por um interpretador, sem a necessidade de compilação
+                prévia.</p>
+    
+            <p><strong>Interpretação:</strong> As linguagens de script são geralmente interpretadas, o que permite uma
+                execução rápida e flexível do código. Isso torna-as ideais para tarefas de automação e scripting, onde é
+                necessário iterar rapidamente sobre o código durante o desenvolvimento.</p>
+    
+            <p><strong>Tipagem Dinâmica:</strong> Muitas linguagens de script têm tipagem dinâmica, o que significa que os
+                tipos de dados das variáveis são determinados em tempo de execução. Isso oferece flexibilidade, mas também
+                pode levar a erros difíceis de detectar.</p>
+    
+            <p><strong>Uso:</strong> As linguagens de script são amplamente utilizadas em uma variedade de contextos,
+                incluindo automação de tarefas de sistemas, desenvolvimento web, processamento de texto, manipulação de
+                dados, entre outros. Exemplos incluem Python, JavaScript, Ruby, Perl e PowerShell.</p>
+    
+            <p><strong>Facilidade de Uso:</strong> As linguagens de script são conhecidas por sua facilidade de uso e
+                sintaxe legível. Elas são projetadas para serem acessíveis para programadores iniciantes e experientes,
+                facilitando o desenvolvimento rápido de soluções de software.</p>
+    
+            <p><strong>Vantagens das linguagens de script:</strong>
+                Fácil aprendizado: O usuário pode aprender a codificar em linguagens de script rapidamente, não sendo
+                necessário muito conhecimento de tecnologia web.
+                Edição rápida: É altamente eficiente com o número limitado de estruturas de dados e variáveis ​​a serem
+                usadas.
+                Interatividade: Auxilia na adição de interfaces e combinações de visualização em páginas web. As páginas da
+                web modernas exigem o uso de linguagens de script. Para criar páginas da web aprimoradas, uma descrição
+                visual fascinante que inclui cores de fundo e de primeiro plano e assim por diante.
+                Funcionalidade: Existem diferentes bibliotecas que fazem parte de diferentes linguagens de script. Eles
+                auxiliam na criação de novos aplicativos em navegadores web e são diferentes das linguagens de programação
+                normais.</p>
+    
+        <p><strong>Aplicação de linguagens de script </strong>
+              Linguagens de script são usadas em muitas áreas:
+                Linguagens de script são usadas em aplicativos da web. Ele é usado tanto no lado do servidor quanto no lado
+                do cliente. Servidor
+                as linguagens de script do lado são: JavaScript, PHP, Perl etc. e as linguagens de script do lado do cliente
+                são:
+                JavaScript, AJAX, jQuery etc.
+                Linguagens de script são usadas na administração do sistema. Por exemplo: scripts Shell, Perl, Python, etc.
+                É utilizado em aplicativos de Jogos e Multimídia.
+                É usado para criar plug-ins e extensões para aplicativos existentes. </p>
+            <p><strong> Exemplos comuns: </strong>
+               <ul> <li>Python: interpretado, digitado dinamicamente, suporta vários paradigmas de programação e possui extensas
+                    bibliotecas.</li>
+                <li>JavaScript: interpretado, digitado dinamicamente, usado principalmente para desenvolvimento web, tanto
+                    do lado do cliente quanto do lado do servidor.</li>
+                <li>Ruby: Interpretado, digitado dinamicamente, conhecido por sua simplicidade e produtividade, muito
+                    utilizado em desenvolvimento web.</li>
+                <li>Perl: Interpretado, digitado dinamicamente, originalmente projetado para processamento de texto, com
+                    forte suporte para expressões regulares.</li>
+                <li>Bash: Shell de comando e linguagem de script usada principalmente em ambientes Unix/Linux para tarefas
+                    de administração do sistema.</li>
+                <li>PowerShell: estrutura de automação de tarefas e gerenciamento de configuração usada principalmente em
+                    ambientes Windows.</li>
+            </ul>
+            </p>
+        </div>
+
+            </div>
+            <div class="button-container">
+                <button onclick="scrollToNextImage('image1')">Voltar</button>
+                <button onclick="scrollToNextImage('image2')">Assembly</button>
+            </div>
+        </div>
+    </center>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function scrollToNextImage(nextImageId) {
+            var nextImage = document.getElementById(nextImageId);
+            nextImage.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <div class="image" id="image1">
+            <img src="blue.jpg" alt="Imagem 1">
+            <div class="overlay">
+                <h2>Introdução</h2>
+            </div>
+            <div class="button-container">
+                <button onclick="scrollToNextImage('image2')">Assembly</button>
+                <button onclick="scrollToNextImage('image3')">Linguagem de Script</button>
+            </div>
+        </div>
+        <div class="image" id="image2">
+            <img src="blue.jpg" alt="Imagem 2">
+            <div class="overlay">
+                <h2>Assembly:</h2>
+                <p><strong>Definição:</strong> Assembly é uma linguagem de programação de baixo nível que representa instruções
+                    de linguagem de máquina de forma textual, usando mnemônicos que correspondem a operações de nível mais baixo
+                    realizadas pelo processador.</p>
+                    <p><strong>Nível de Abstração:</strong> É uma linguagem de programação de baixo nível, o que significa que está
+                        muito próxima da linguagem de máquina entendida pelo hardware do computador. Cada instrução em Assembly é
+                        geralmente traduzida diretamente para uma instrução em linguagem de máquina.</p>
+            
+                    <p><strong>Arquitetura Específica:</strong> O código Assembly é específico para a arquitetura do processador
+                        alvo. Por exemplo, o Assembly para um processador x86 será diferente do Assembly para um processador ARM.
+                    </p>
+            
+                    <p><strong>Uso:</strong> Assembly é usado em situações onde é necessário controle preciso sobre o hardware do
+                        computador ou quando é crucial otimizar o desempenho do código para executar operações específicas
+                        rapidamente. Isso inclui o desenvolvimento de sistemas operacionais, drivers de dispositivos, firmware de
+                        baixo nível e outras aplicações de baixo nível.</p>
+            
+                    <p><strong>Exemplos de Assembler:</strong> Alguns exemplos de assemblers populares incluem NASM (Netwide
+                        Assembler), MASM (Microsoft Macro Assembler), GAS (GNU Assembler) e TASM (Turbo Assembler).
+            
+                        <p>
+                       <strong> Características Principais</strong>
+            
+                        Baixo Nível: Descreve a proximidade da linguagem Assembly com as instruções de máquina.
+                        
+                        Mnemônicos: Representam as operações de máquina de forma legível para humanos.
+                        
+                        Estrutura Linear: Programas Assembly geralmente seguem uma sequência linear de instruções, com controle de
+                        fluxo implementado através de instruções de salto.
+                        
+                    Acesso Direto à Memória e Hardware: Assembly oferece controle direto sobre memória, registradores e
+                        periféricos de hardware.</p>
+                        
+                       <p> <strong>Características Adicionais</strong> 
+                        
+                    Eficiência de Desempenho: Destaca o potencial de desempenho máximo dos programas Assembly.
+                        
+                        Flexibilidade: Enfatiza a capacidade de granularidade fina no controle de recursos do sistema.
+                        
+                        Tamanho do Código: Menciona a compacidade dos programas Assembly em comparação com linguagens de alto nível.
+                        
+                        Desafios de Manutenção e Portabilidade: Reconhece os desafios associados à manutenção e portabilidade de
+                        programas Assembly. </p>
+            </div>
+            <div class="button-container">
+                <button onclick="scrollToNextImage('image1')">Voltar</button>
+                <button onclick="scrollToNextImage('image3')">Linguagem de Script</button>
+            </div>
+        </div>
+        <div class="image" id="image3">
+            <img src="blue.jpg" alt="Imagem 3">
+            <div class="overlay">
+                <h2>Linguagens de Script:</h2>
+                <p><strong>Definição:</strong> Uma linguagem de script é uma linguagem de programação de alto nível projetada
+                    para automação de tarefas e interação com sistemas de software. Essas linguagens são interpretadas, o que
+                    significa que o código-fonte é executado diretamente por um interpretador, sem a necessidade de compilação
+                    prévia.</p>
+                <p><strong>Interpretação:</strong> As linguagens de script são geralmente interpretadas, o que permite uma
+                    execução rápida e flexível do código. Isso torna-as ideais para tarefas de automação e scripting, onde é
+                    necessário iterar rapidamente sobre o código durante o desenvolvimento.</p>
         
-        <p><strong>Interpretation:</strong> Scripting languages are generally interpreted, allowing fast and flexible code execution. This makes them ideal for automation and scripting tasks, where rapid iteration over the code during development is required.</p>
+                <p><strong>Tipagem Dinâmica:</strong> Muitas linguagens de script têm tipagem dinâmica, o que significa que os
+                    tipos de dados das variáveis são determinados em tempo de execução. Isso oferece flexibilidade, mas também
+                    pode levar a erros difíceis de detectar.</p>
         
-        <p><strong>Dynamic Typing:</strong> Many scripting languages have dynamic typing, which means that variable data types are determined at runtime. This provides flexibility but can also lead to difficult-to-detect errors.</p>
+                <p><strong>Uso:</strong> As linguagens de script são amplamente utilizadas em uma variedade de contextos,
+                    incluindo automação de tarefas de sistemas, desenvolvimento web, processamento de texto, manipulação de
+                    dados, entre outros. Exemplos incluem Python, JavaScript, Ruby, Perl e PowerShell.</p>
         
-        <p><strong>Usage:</strong> Scripting languages are widely used in a variety of contexts, including system task automation, web development, text processing, data manipulation, among others. Examples include Python, JavaScript, Ruby, Perl, and PowerShell.</p>
+                <p><strong>Facilidade de Uso:</strong> As linguagens de script são conhecidas por sua facilidade de uso e
+                    sintaxe legível. Elas são projetadas para serem acessíveis para programadores iniciantes e experientes,
+                    facilitando o desenvolvimento rápido de soluções de software.</p>
         
-        <p><strong>Ease of Use:</strong> Scripting languages are known for their ease of use and readable syntax. They are designed to be accessible to both novice and experienced programmers, facilitating the rapid development of software solutions.</p>
-    </div>
+                <p><strong>Vantagens das linguagens de script:</strong>
+                    Fácil aprendizado: O usuário pode aprender a codificar em linguagens de script rapidamente, não sendo
+                    necessário muito conhecimento de tecnologia web.
+                    Edição rápida: É altamente eficiente com o número limitado de estruturas de dados e variáveis ​​a serem
+                    usadas.
+                    Interatividade: Auxilia na adição de interfaces e combinações de visualização em páginas web. As páginas da
+                    web modernas exigem o uso de linguagens de script. Para criar páginas da web aprimoradas, uma descrição
+                    visual fascinante que inclui cores de fundo e de primeiro plano e assim por diante.
+                    Funcionalidade: Existem diferentes bibliotecas que fazem parte de diferentes linguagens de script. Eles
+                    auxiliam na criação de novos aplicativos em navegadores web e são diferentes das linguagens de programação
+                    normais.</p>
+        
+            <p><strong>Aplicação de linguagens de script </strong>
+                  Linguagens de script são usadas em muitas áreas:
+                    Linguagens de script são usadas em aplicativos da web. Ele é usado tanto no lado do servidor quanto no lado
+                    do cliente. Servidor
+                    as linguagens de script do lado são: JavaScript, PHP, Perl etc. e as linguagens de script do lado do cliente
+                    são:
+                    JavaScript, AJAX, jQuery etc.
+                    Linguagens de script são usadas na administração do sistema. Por exemplo: scripts Shell, Perl, Python, etc.
+                    É utilizado em aplicativos de Jogos e Multimídia.
+                    É usado para criar plug-ins e extensões para aplicativos existentes. </p>
+                
+                <!-- More information about Scripting languages -->
+            </div>
+            <div class="button-container">
+                <button onclick="scrollToNextImage('image1')">Voltar</button>
+                <button onclick="scrollToNextImage('image2')">Assembly</button>
+            </div>
+        </div>
+    </center>
 
     <script src="script.js"></script>
+
 </body>
+
 </html>

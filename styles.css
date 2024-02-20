@@ -1,0 +1,59 @@
+body, html {
+    margin: 0px;
+    padding: 0;
+    height: 100%;
+    background-color: #aeb9e8; /* Cor de fundo alterada */
+}
+
+.image {
+    position: relative;
+    margin: 20px;
+    width: 1000px;
+}
+
+.image img {
+    width: 100%; /* Ajustando a largura para ocupar toda a largura do contêiner */
+    max-height: 600px; /* Definindo a altura máxima */
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease; /* Transição suave */
+    text-align: center;
+    
+}
+
+.image:hover .overlay {
+    opacity: 1; /* Torna visível ao passar o mouse */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin-top: 20px; /* Adiciona espaço entre o título e os botões */
+}
+
+.button-container button {
+    margin: 0 10px; /* Adiciona espaço entre os botões */
+    padding: 10px 20px; /* Adicionando preenchimento para melhorar a aparência */
+    background-color: #333; /* Cor de fundo do botão */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #555; /* Cor de fundo do botão ao passar o mouse */
+}
